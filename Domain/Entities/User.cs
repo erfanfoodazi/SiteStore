@@ -24,7 +24,5 @@ namespace Domain.Entities
             UserType = userType;
             CreatedAt = DateTime.UtcNow;
         }
-
-
     }
 }
