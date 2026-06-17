@@ -1,14 +1,11 @@
 ﻿using Domain.Enums;
+using Microsoft.AspNetCore.Identity;
 
 namespace Domain.Entities
 {
-    public class User
+    public class User : IdentityUser<int>
     {
-        public int Id { get; set; }
         public string FullName { get; set; } = string.Empty;
-        public string UserName { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string PasswordHash { get; set; } = string.Empty;
         public UserType UserType { get; set; }
         public List<Order> Orders { get; set; } = new List<Order>();
         public List<Transaction> Transactions { get; set; } = new List<Transaction>();
@@ -16,6 +13,17 @@ namespace Domain.Entities
         public List<Rating> Ratings { get; set; } = new();
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+
+        public User() { }
+
+        public User(string fullName, UserType userType, string email, string userName)
+        {
+            FullName = fullName;
+            Email = email;
+            UserName = userName;
+            UserType = userType;
+            CreatedAt = DateTime.UtcNow;
+        }
 
 
     }
