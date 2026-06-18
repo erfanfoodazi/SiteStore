@@ -15,7 +15,6 @@ namespace Domain.Entities
         public string Description { get; set; } = string.Empty;
         public int Stock { get; set; }
         public List<Rating> Ratings { get; set; } = new List<Rating>();
-        public decimal AverageRating { get; set; }
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
         public List<CategoryToProduct> Categories { get; set; } = new List<CategoryToProduct>();
         public decimal Price { get; set; }

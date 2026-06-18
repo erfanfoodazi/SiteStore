@@ -8,6 +8,7 @@ namespace Domain.Entities
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
         public int UserId { get; set; }
         public User? User { get; set; }
+        public List<Transaction> Transactions { get; set; } = new();
         public OrderStatus Status { get; set; }
         public decimal TotalAmount { get; set; }
         public DateTime CreatedAt { get; set; }
