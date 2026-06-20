@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.UseCases.Products.DTOs
 {
-    public class CreateProductResultDto
+    public class UpdateProductResultDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
@@ -14,7 +14,7 @@ namespace Application.UseCases.Products.DTOs
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public string SKU { get; set; } = string.Empty;
+        public DateTime UpdatedAt { get; set; }
         public List<ProductImageResultDto> Images { get; set; } = new();
-        public DateTime CreatedAt { get; set; }
     }
 }
